@@ -1,0 +1,371 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF url(/static/img/img01.jpg) repeat-x left bottom;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #652500;
+}
+
+/* Special elements for Horrido Hobbies */
+
+a, u {
+    text-decoration: none;
+}
+
+.web2py_paginator ul {
+    list-style-type: none;
+    text-align:right;
+}
+
+.web2py_paginator ul li {
+    padding: 5px;
+    display: inline;
+}
+
+.web2py_paginator ul li.current a {
+    font-weight: bold !important;
+}
+
+.web2py_grid .row_buttons {
+    min-height:25px;
+    vertical-align:middle;
+}
+.web2py_grid .row_buttons a {
+    margin:3px;
+}
+
+.web2py_grid .row_buttons a {
+    line-height:20px;
+    margin-left:2px; margin-right:2px; display:inline-block;
+    padding:3px 5px 3px 5px;
+}
+
+/* End special elements */
+
+h1, h2, h3 {
+	margin: 0;
+	text-transform: lowercase;
+	font-weight: normal;
+	color: #652500;
+}
+
+h1 {
+	letter-spacing: -1px;
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 23px;
+}
+
+p, ul, ol {
+	margin: 0 0 2em 0;
+	text-align: justify;
+	line-height: 26px;
+	font-size: 11px;
+}
+
+a:link {
+	color: #BD520E;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+	color: #BD520E;
+}
+
+a:visited {
+	color: #BD520E;
+}
+
+img {
+	border: none;
+}
+
+img.left {
+	float: left;
+	margin-right: 15px;
+}
+
+img.right {
+	float: right;
+	margin-left: 15px;
+}
+
+/* Form */
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+legend {
+	display: none;
+}
+
+input, textarea, select {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+/* Header */
+#header-bg {
+	background: url(/static/img/img02.gif) repeat-x left bottom;
+}
+
+#header {
+	width: 850px;
+	height: 150px;
+	margin: 0 auto 40px auto;
+	background: url(/static/img/img03.gif) no-repeat left top;
+}
+
+#logo {
+	padding: 35px 0 0 100px;
+	float: left;
+}
+
+#logo h1 {
+	font-size: 52px;
+}
+
+#logo h1 sup {
+	vertical-align: text-top;
+	font-size: 24px;
+}
+
+#logo h1 a {
+	color: #F4B07B;
+}
+
+#logo h2 {
+	margin-top: -10px;
+	padding-left: 3px;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #A0A0A0;
+}
+
+#logo a {
+	text-decoration: none;
+}
+
+/* Menu */
+
+#menu {
+	float: right;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 55px 0 0 0;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	margin-left: 5px;
+	padding: 7px 20px 7px 15px;
+	background: url(/static/img/img04.gif) no-repeat left 55%;
+	text-decoration: none;
+	font-size: 16px;
+	color: #BD520E;
+}
+
+#menu a:hover {
+	text-decoration: none;
+}
+
+#menu .active a {
+}
+
+/* Page */
+
+#page {
+	width: 850px;
+	margin: 0 auto;
+}
+
+/* Content */
+
+#content {
+	float: left;
+	width: 600px;
+}
+
+/* Post */
+
+.post {
+}
+
+.post .title {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 0 0 7px 0px;
+}
+
+.post .entry {
+}
+
+.post .meta {
+	background: url(/static/img/img02.gif) repeat-x left top;
+	padding: 15px 10px 30px 0px;
+}
+
+.post .meta p {
+	margin: 0;
+	line-height: normal;
+	color: #999999;
+}
+
+.post .meta .byline {
+	float: right;
+	color: #BD520E;
+}
+
+.post .meta .links {
+	float: left;
+}
+
+.post .meta .more {
+	padding: 0 20px 0 18px;
+	background: url(/static/img/img06.gif) no-repeat left center;
+}
+
+.post .meta .comments {
+	padding-left: 22px;
+	background: url(/static/img/img07.gif) no-repeat left center;
+}
+
+.post .meta b {
+	display: none;
+}
+
+/* Sidebar */
+
+#sidebar {
+	float: right;
+	width: 195px;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar li {
+	margin-bottom: 40px;
+}
+
+#sidebar li ul {
+}
+
+#sidebar li li {
+	margin: 0;
+	padding-left: 12px;
+}
+
+#sidebar h2 {
+	margin-bottom: 10px;
+	padding-left: 15px;
+	background: url(/static/img/img02.gif) repeat-x left bottom;
+	font-size: 16px;
+}
+
+/* Search */
+
+#search {
+}
+
+#search h2 {
+	margin-bottom: 20px;
+}
+
+#s {
+	width: 110px;
+	margin-right: 5px;
+	padding: 2px;
+	border: 1px solid #F0F0F0;
+}
+
+#x {
+	padding: 4px 4px;
+	background: #BD520E;
+	border: none;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+
+/* Boxes */
+
+.box1 {
+	padding: 20px;
+	background: url(/static/img/img05.gif) no-repeat;
+}
+
+.box2 {
+	color: #BABABA;
+}
+
+.box2 h2 {
+	margin-bottom: 15px;
+	background: url(/static/img/img10.gif) repeat-x left bottom;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+.box2 ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.box2 a:link, .box2 a:hover, .box2 a:active, .box2 a:visited  {
+	color: #EDEDED;
+}
+
+/* Footer */
+
+#footer {
+	min-height: 74px;
+	padding: 10px 0 0 0;
+	background: url(/static/img/img02.gif) repeat-x left top;
+}
+
+html>body #footer {
+	height: auto;
+}
+
+#legal {
+	clear: both;
+	padding-top: 10px;
+	text-align: center;
+	color: #943505;
+}
+
+#legal a {
+	color: #943505;
+}

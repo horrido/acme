@@ -1,7 +1,6 @@
 package main
 
 import (
-	models "acme/models"
 	_ "acme/routers"
 	"fmt"
 	"github.com/astaxie/beego"
@@ -10,7 +9,6 @@ import (
 )
 
 func init() {
-	orm.RegisterModel(new(models.AuthUser))
 	orm.RegisterDriver("sqlite", orm.DR_Sqlite)
 	orm.RegisterDataBase("default", "sqlite3", "acme.db")
 	name := "default"

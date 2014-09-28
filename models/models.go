@@ -1,6 +1,9 @@
 package models
 
-import "time"
+import (
+	"github.com/astaxie/beego/orm"
+	"time"
+)
 
 type AuthUser struct {
 	Id       int
@@ -10,4 +13,8 @@ type AuthUser struct {
 	Password string
 	Reg_key  string
 	Reg_date time.Time `orm:"auto_now_add;type(datetime)"`
+}
+
+func init() {
+	orm.RegisterModel(new(AuthUser))
 }

@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "acme/models"
 	_ "acme/routers"
 	"fmt"
 	"github.com/astaxie/beego"

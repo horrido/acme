@@ -221,6 +221,7 @@ func (this *MainController) Verify() {
 func (this *MainController) Profile() {
 	this.activeContent("user/profile")
 
+	//******** This page requires login
 	sess := this.GetSession("acme")
 	if sess == nil {
 		this.Redirect("/login/home", 302)

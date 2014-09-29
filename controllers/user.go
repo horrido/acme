@@ -201,6 +201,23 @@ func sendVerification(email, u string) bool {
 	return true
 }
 
+func (this *MainController) Verify() {
+	this.activeContent("user/verify")
+
+	u := this.Ctx.Input.Param(":uuid")
+	o := orm.NewOrm()
+	o.Using("default")
+	user := models.AuthUser{Reg_key: u}
+	err := o.Read(&user, "Reg_key")
+	if err == nil {
+		this.Data["Verified"] = 1
+		user.Reg_key = ""
+		if num, err := o.Update(&user); err == nil {
+			fmt.Println("User updated:", num)
+		}
+	}
+}
+
 func (this *MainController) Profile() {
 	this.activeContent("user/profile")
 
@@ -333,23 +350,6 @@ func (this *MainController) Profile() {
 			flash.Error("Internal error")
 			flash.Store(&this.Controller)
 			return
-		}
-	}
-}
-
-func (this *MainController) Verify() {
-	this.activeContent("user/verify")
-
-	u := this.Ctx.Input.Param(":uuid")
-	o := orm.NewOrm()
-	o.Using("default")
-	user := models.AuthUser{Reg_key: u}
-	err := o.Read(&user, "Reg_key")
-	if err == nil {
-		this.Data["Verified"] = 1
-		user.Reg_key = ""
-		if num, err := o.Update(&user); err == nil {
-			fmt.Println("User updated:", num)
 		}
 	}
 }

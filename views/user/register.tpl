@@ -15,7 +15,7 @@
 <table>
 <tr>
     <td>First name:</td>
-    <td><input name="first" type="text" /></td>
+    <td><input name="first" type="text" autofocus /></td>
 </tr>
 <tr>
     <td>Last name:</td>

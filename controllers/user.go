@@ -305,19 +305,6 @@ func (this *MainController) Profile() {
 			}
 			h := pk.HashPassword(password)
 
-			//******** Compare submitted password with database
-			var x pk.PasswordHash
-
-			x.Hash = make([]byte, 32)
-			copy(x.Hash, y.Hash[:32])
-			x.Salt = make([]byte, 16)
-			copy(x.Salt, y.Salt[:16])
-			if !pk.MatchPassword(current, &x) {
-				flash.Error("Bad current password")
-				flash.Store(&this.Controller)
-				return
-			}
-
 			//******** Convert password hash to string
 			buf := new(bytes.Buffer)
 			err = binary.Write(buf, binary.LittleEndian, h.Hash)
@@ -335,6 +322,19 @@ func (this *MainController) Profile() {
 			b := buf.Bytes()
 			fmt.Printf("password hash/salt is: %x\n", b)
 			user.Password = string(b)
+		}
+
+		//******** Compare submitted password with database
+		var x pk.PasswordHash
+
+		x.Hash = make([]byte, 32)
+		copy(x.Hash, y.Hash[:32])
+		x.Salt = make([]byte, 16)
+		copy(x.Salt, y.Salt[:16])
+		if !pk.MatchPassword(current, &x) {
+			flash.Error("Bad current password")
+			flash.Store(&this.Controller)
+			return
 		}
 
 		//******** Save user info to database

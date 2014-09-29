@@ -20,7 +20,7 @@
 </tr>
 <tr><td>&nbsp;</td></tr>
 <tr>
-    <td>&nbsp;</td><td><input type="submit" value="Register" /></td><td><a href="http://localhost:8080/home">Cancel</a></td>
+    <td>&nbsp;</td><td><input type="submit" value="Remove" /></td><td><a href="http://localhost:8080/home">Cancel</a></td>
 </tr>
 </table>
 </form>

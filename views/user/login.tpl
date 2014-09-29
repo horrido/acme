@@ -15,7 +15,7 @@
 <table>
 <tr>
     <td>Email address:</td>
-    <td><input name="email" type="text" /></td>
+    <td><input name="email" type="text" autofocus /></td>
 </tr>
 <tr>      
     <td>Password:</td>

@@ -116,7 +116,6 @@ func (this *MainController) Register() {
 		valid := validation.Validation{}
 		valid.Required(first, "first")
 		valid.Email(email, "email")
-		valid.Required(password, "password")
 		valid.MinSize(password, 6, "password")
 		valid.Required(password2, "password2")
 		if valid.HasErrors() {

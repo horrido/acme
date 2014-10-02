@@ -210,8 +210,8 @@ func (this *MainController) Verify() {
 	if err == nil {
 		this.Data["Verified"] = 1
 		user.Reg_key = ""
-		if num, err := o.Update(&user); err == nil {
-			fmt.Println("User updated:", num)
+		if _, err := o.Update(&user); err != nil {
+			delete(this.Data, "Verified")
 		}
 	}
 }

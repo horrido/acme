@@ -340,15 +340,12 @@ func (this *MainController) Profile() {
 		user.Last = last
 		user.Email = email
 
-		o.Begin()
 		_, err := o.Update(&user)
 		if err == nil {
-			o.Commit()
 			flash.Notice("Profile updated")
 			flash.Store(&this.Controller)
 			m["username"] = email
 		} else {
-			o.Rollback()
 			flash.Error("Internal error")
 			flash.Store(&this.Controller)
 			return

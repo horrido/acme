@@ -257,6 +257,7 @@ func (this *MainController) Profile() {
 		return
 	}
 
+	// this deferred function ensures that the correct fields from the database are displayed
 	defer func(this *MainController, user *models.AuthUser) {
 		this.Data["First"] = user.First
 		this.Data["Last"] = user.Last

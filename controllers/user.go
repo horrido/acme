@@ -164,7 +164,7 @@ func sendVerification(email, u string) bool {
 	msg.SetHeader("Subject", "Account Verification for ACME Corporation")
 	msg.SetBody("text/html", "To verify your account, please click on the link: <a href=\""+link+
 		"\">"+link+"</a><br><br>Best Regards,<br>ACME Corporation")
-	m := gomail.NewMailer(host, "miramartwentyone@gmail.com", "Acura3.2TL-2015NSX", port)
+	m := gomail.NewMailer(host, "youraccount@gmail.com", "YourPassword", port)
 	if err := m.Send(msg); err != nil {
 		return false
 	}

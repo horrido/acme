@@ -136,7 +136,7 @@ func (this *MainController) Register() {
 		// Add user to database with new uuid and send verification email
 		u := uuid.NewV4()
 		user.Reg_key = u.String()
-		_, err := o.Insert(user) // BUG: the input parameter MUST be passed by value, contradicting the documentation
+		_, err := o.Insert(&user)
 		if err != nil {
 			flash.Error(email + " already registered")
 			flash.Store(&this.Controller)

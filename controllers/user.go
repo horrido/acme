@@ -125,10 +125,7 @@ func (this *MainController) Register() {
 		o := orm.NewOrm()
 		o.Using("default")
 
-		user := new(models.AuthUser)
-		user.First = first
-		user.Last = last
-		user.Email = email
+		user := models.AuthUser{First: first, Last: last, Email: email}
 
 		// Convert password hash to string
 		user.Password = hex.EncodeToString(h.Hash) + hex.EncodeToString(h.Salt)
@@ -136,7 +133,7 @@ func (this *MainController) Register() {
 		// Add user to database with new uuid and send verification email
 		u := uuid.NewV4()
 		user.Reg_key = u.String()
-		_, err := o.Insert(user) // 'user' is a pointer, so just pass the pointer
+		_, err := o.Insert(&user)
 		if err != nil {
 			flash.Error(email + " already registered")
 			flash.Store(&this.Controller)

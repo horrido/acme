@@ -136,7 +136,7 @@ func (this *MainController) Register() {
 		// Add user to database with new uuid and send verification email
 		u := uuid.NewV4()
 		user.Reg_key = u.String()
-		_, err := o.Insert(user) //BUG: cannot pass by reference
+		_, err := o.Insert(user) // 'user' is a pointer, so just pass the pointer
 		if err != nil {
 			flash.Error(email + " already registered")
 			flash.Store(&this.Controller)

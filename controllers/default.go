@@ -15,7 +15,7 @@ func (this *MainController) activeContent(view string) {
 	this.LayoutSections["Header"] = "header.tpl"
 	this.LayoutSections["Sidebar"] = "sidebar.tpl"
 	this.LayoutSections["Footer"] = "footer.tpl"
-	this.TplNames = view + ".tpl"
+	this.TplName = view + ".tpl"
 
 	sess := this.GetSession("acme")
 	if sess != nil {

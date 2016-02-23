@@ -10,7 +10,7 @@ import (
 )
 
 func init() {
-	orm.RegisterDriver("sqlite", orm.DR_Sqlite)
+	orm.RegisterDriver("sqlite", orm.DRSqlite)
 	orm.RegisterDataBase("default", "sqlite3", "acme.db")
 	name := "default"
 	force := false
@@ -22,6 +22,6 @@ func init() {
 }
 
 func main() {
-	beego.SessionOn = true
+	beego.BConfig.WebConfig.Session.SessionOn = true
 	beego.Run()
 }

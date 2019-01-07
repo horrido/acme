@@ -4,6 +4,7 @@ import (
 	_ "acme/models"
 	_ "acme/routers"
 	"fmt"
+
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	_ "github.com/mattn/go-sqlite3"
@@ -22,6 +23,5 @@ func init() {
 }
 
 func main() {
-	beego.BConfig.WebConfig.Session.SessionOn = true
 	beego.Run()
 }
